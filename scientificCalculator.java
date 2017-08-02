@@ -10,7 +10,7 @@ public class scientificCalculator extends simpleCalculator{
         Scanner input = new Scanner(System.in);
         
         
-        System.out.println("Press 1 for log, 2 for sin");
+        System.out.println("Press 1 for log");
         System.out.println("Press 2 for sin");
         System.out.println("Press 3 for cosec");
         System.out.println("Press 4 for cos");
@@ -92,37 +92,70 @@ public class scientificCalculator extends simpleCalculator{
 
                         public double Sin(double x)
                         {
-                            System.out.println(sin(x));
+                            System.out.print(sin(x));
+                            System.out.print("Radians");
                               return sin(x);
                         }
 
                         public double Cosec(double x)
                         {
-                            System.out.println(1/sin(x));
-                              return 1/sin(x);
+                            if(x==0)
+                            {
+                                System.out.println("Infinity");
+                            }
+                            else
+                            {
+                                System.out.print(1/sin(x));
+                                System.out.print("Radians");
+                            }
+                            return 1/sin(x);
                         }
 
                         public double Cos(double x)
                         {
-                            System.out.println(cos(x));
+                            System.out.print(cos(x));
+                            System.out.print("Radians");
                               return cos(x);
                         }
 
                         public double Sec(double x)
                         {
-                            System.out.println(1/cos(x));
-                              return 1/cos(x);
+                            if(x==90)
+                            {
+                                System.out.println("Infinity");
+                            }
+                            else
+                            {
+                               System.out.print(1/cos(x));
+                               System.out.print("Radians");
+                            }
+                            return 1/cos(x);
                         }
 
                         public double Tan(double x)
                         {
-                            System.out.println(tan(x));
+                            if(x==90)
+                            {
+                                System.out.println("Infinity");
+                            }
+                            else
+                            {
+                                System.out.print(tan(x));
+                                System.out.print("Radians");
+                            }
                               return tan(x);
                         }
 
                         public double Cot(double x)
                         {
-                            System.out.println(1/tan(x));
+                            if(x==0)
+                            {
+                                System.out.println("Infinity");
+                            }
+                            {
+                                System.out.print(1/tan(x));
+                                System.out.print("Radians");
+                            }
                               return 1/tan(x);
                         }
 
